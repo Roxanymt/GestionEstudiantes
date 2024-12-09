@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionEstudiantes.AppMovil.Vistas.CrearEstudiante"
+             Title="Agregar Estudiante">
+    <VerticalStackLayout>
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <Picker Title="Seleccionar Curso"
+                ItemsSource="{Binding Cursos}"
+                ItemDisplayBinding="{Binding Nombre}"
+                x:Name="cursoPicker"/>
+
+            <Entry Placeholder="Primer Nombre"
+               x:Name="primerNombreentry"/>
+
+            <Entry Placeholder="Primer Apellido"
+               x:Name="primerApellidoentry"/>
+
+            <Entry Placeholder="Segundo Apellido"
+               x:Name="segundoApellidoentry"/>
+
+            <Entry Placeholder="Correo Electronico"
+               x:Name="correoEntry"/>
+
+            <Entry Placeholder="Edad"
+               x:Name="edadEntry"
+               Keyboard="Numeric"/>
+
+            <Button Text="Guardar"
+                x:Name="guardarBoton"
+                Clicked="guardarBoton_Clicked"/>
+            
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
