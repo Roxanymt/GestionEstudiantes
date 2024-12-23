@@ -26,6 +26,9 @@
                x:Name="edadEntry"
                Keyboard="Numeric"/>
 
+            <Label Text="¿Activo?" />
+            <Switch x:Name="estadoSwitch" IsToggled="True"/>
+
             <Button Text="Guardar"
                 x:Name="guardarBoton"
                 Clicked="guardarBoton_Clicked"/>

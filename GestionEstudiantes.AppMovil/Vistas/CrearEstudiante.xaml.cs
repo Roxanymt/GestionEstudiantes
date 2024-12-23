@@ -34,8 +34,9 @@ public partial class CrearEstudiante : ContentPage
 			SegundoApellido = segundoApellidoentry.Text,
 			CorreoElectronico = correoEntry.Text,
 			Edad = int.Parse(edadEntry.Text),
-			Curso = curso
-		};
+			Curso = curso,
+            Estado = estadoSwitch.IsToggled
+        };
 
 		try
 		{

@@ -8,6 +8,8 @@ namespace RegistroEstudiantes.Modelos.Modelos
 {
     public class Estudiante
     {
+        public string? Id { get; set; }
+
         public string? PrimerNombre { get; set; }
 
         public string? PrimerApellido { get; set; }
@@ -20,6 +22,10 @@ namespace RegistroEstudiantes.Modelos.Modelos
 
         public Curso Curso { get; set; }
 
+        public bool? Estado { get; set; }
+
         public string NombreCompleto => $"{PrimerNombre} {PrimerApellido}";
+
+        public string EstadoTexto => Estado.HasValue ? (Estado.Value ? "Activo" : "Inactivo") : "Estado Desconocido";
     }
 }
